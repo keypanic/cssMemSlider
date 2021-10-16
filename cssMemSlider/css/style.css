@@ -9,11 +9,27 @@ body {
 }
 
 .wrapper {
-    background-color: green;
     width: 50vw;
     height: 100vh;
     margin: 0 auto;
     overflow: hidden;
+    display: grid;
+    grid-template-rows: min-content 3rem 3rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.slider {
+    grid-column: 1 / -1;
+}
+
+.bullets {
+    display: flex;
+    justify-content: end;
+}
+
+.description {
+    display: flex;
+    justify-content: start;
 }
 
 .slide > * {
@@ -79,7 +95,6 @@ svg {
 #slide3:checked ~ .bullets #svg3  { fill-opacity: 0; }
 #slide4:checked ~ .bullets #svg4  { fill-opacity: 0; }
 
-
 svg:hover {
     stroke-width: 2px;
     fill: white;
@@ -91,12 +106,38 @@ svg:hover {
     display: none;
 }
 
-  @media only screen and (max-width: 1024px) {
-      .wrapper {
-          max-width: 420px;
-      }
+.description > * {
+}
 
-      .slider {
-          height: 30vh;
-      }
-  }
+@media only screen and (max-width: 1920px) {
+    .slider {
+        max-height: 80vh;
+    }
+}
+ 
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        max-width: 420px;
+    }
+
+    .slider {
+        height: 40vh;
+    }
+
+    .description {
+        order: 3;
+        grid-column: 1/-1;
+    }
+
+    .bullets {
+        order: 2;
+        margin: 0 auto;
+        grid-column: 1 / -1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .slider {
+        height: 30vh;
+    }
+}
