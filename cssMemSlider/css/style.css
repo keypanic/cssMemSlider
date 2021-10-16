@@ -1,5 +1,44 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
-  
+  body {
+      background-color: darkgray;
+  }
+
+
+input[type=radio] {
+    display: none;
+}
+
+input[name='dot']:checked+label svg {
+    fill-opacity: 0;
+}
+
+svg {
+    fill: #69a3fc;
+    width: 48px;
+    height: 48px;
+    stroke: #69a3fc;
+    stroke-width: 2px;
+    transition: .2s ease-in all;
+}
+
+svg:hover {
+    stroke-width: 2px;
+    fill: white;
+    stroke: white;
+    cursor: pointer;
+}
+
+.svg-imgs {
+    display: none;
+}
+
+  @media only screen and (max-width: 960px) {
+      .wrapper {
+          max-width: 420px;
+      }
+  }
