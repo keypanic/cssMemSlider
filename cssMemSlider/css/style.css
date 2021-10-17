@@ -7,7 +7,7 @@
 body {
     background-color: #505355;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .wrapper {
@@ -15,9 +15,10 @@ body {
     background-color: #24282b;
     width: min-content;
     min-width: 50%;
-    margin: 5rem auto;
+    margin: 7vh auto;
     overflow: hidden;
     display: grid;
+    align-items: flex-start;
     grid-row-gap: 1rem;
     /* grid-template-rows: min-content 3rem 3rem; */
     grid-template-rows: min-content ;
@@ -36,6 +37,7 @@ body {
 
 .bullets > label {
     cursor: pointer;
+    padding: .5rem;
 }
 
 .description  {
@@ -48,6 +50,7 @@ body {
 .description > * {
     /* display: inline-block; */
     /* width: 100%; */
+    margin-top: 1rem;
     transform: translateX(-100%);
     opacity: 0; 
     /* cubic-bezier(0.000, 1.390, 0.920, 0.880)  */
@@ -150,6 +153,10 @@ label:hover svg {
         grid-column: 1 / -1;
     }
 
+    .description > * {
+        margin-top: 0;
+    }
+    
     svg {
         width: 2rem;
         height: 2rem;
