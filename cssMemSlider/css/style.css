@@ -46,7 +46,6 @@ body {
     /* width: 100%; */
     transform: translateX(-100%);
     opacity: 0; 
-    transition: 0.8s;
     /* cubic-bezier(0.000, 1.390, 0.920, 0.880)  */
 }
 
@@ -90,25 +89,16 @@ svg {
     transition: .2s ease-in all;
 }
 
-#slide1:checked ~ .description .slide1 {
+#slide1:checked ~ .description .slide1,
+#slide2:checked ~ .description .slide2,
+#slide3:checked ~ .description .slide3,
+#slide4:checked  ~ .description .slide4
+ {
     transform: translateX(0%); 
     grid-row-start: 1;
     opacity: 1;
-}
-#slide2:checked ~ .description .slide2 {
-    transform: translateX(0%); 
-    grid-row-start: 1;
-    opacity: 1;
-}
-#slide3:checked ~ .description .slide3 {
-    transform: translateX(0%); 
-    grid-row-start: 1;
-    opacity: 1;
-}
-#slide4:checked  ~ .description .slide4 {
-    transform: translateX(0%);     
-    grid-row-start: 1;
-    opacity: 1;
+    transition: 0.45s ease-in all;
+
 } 
  
 #slide1:checked ~ .slider { 
