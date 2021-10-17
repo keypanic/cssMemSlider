@@ -34,6 +34,10 @@ body {
     justify-content: end;
 }
 
+.bullets > label {
+    cursor: pointer;
+}
+
 .description  {
     overflow: hidden;
     display: grid;
@@ -119,7 +123,7 @@ svg {
 #slide3:checked ~ .bullets #svg3  { fill-opacity: 0; }
 #slide4:checked ~ .bullets #svg4  { fill-opacity: 0; }
 
-svg:hover {
+label:hover svg {
     fill: white;
     stroke: white;
     cursor: pointer;
