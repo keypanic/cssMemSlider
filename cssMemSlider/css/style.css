@@ -36,7 +36,6 @@ body {
 
 .description  {
     overflow: hidden;
-    /* white-space: nowrap; */
     display: grid;
     /* grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr); */
@@ -47,7 +46,8 @@ body {
     /* width: 100%; */
     transform: translateX(-100%);
     opacity: 0; 
-    transition: 0.8s; 
+    transition: 0.8s;
+    /* cubic-bezier(0.000, 1.390, 0.920, 0.880)  */
 }
 
 .slide > * {
