@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>cssMemSlider</title>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="radio" name="dot" id="slide1" checked>
+        <input type="radio" name="dot"  id="slide2" >
+        <input type="radio" name="dot"  id="slide3">
+        <input type="radio" name="dot"  id="slide4">
+
+        <div class="slider"> 
+            <img src="./assets/images/1.jpg" alt="">
+            <img src="./assets/images/2.jpg" alt="">
+            <img src="./assets/images/3.jpg" alt="">
+            <img src="./assets/images/4.jpg" alt="">
+        </div>
+        <!-- <div class="description-wrapper"> -->
+            <div class="description">
+                <p class="slide1">Новое задание</p>
+                <p class="slide2">Две стадии осмысления</p>
+                <p class="slide3">Looks like i got to wait</p>
+                <p class="slide4">How it work? VPN</p>
+            </div>
+        <!-- </div> -->
+        <div class="bullets">
+            <label for="slide1">
+                <svg id="svg1" class="icon">
+                    <use xlink:href="#bullet"></use>
+                </svg>
+            </label>
+            <label for="slide2">
+                <svg id="svg2" class="icon">
+                    <use xlink:href="#bullet"></use>
+                </svg>
+            </label>
+            <label for="slide3">
+                <svg id="svg3" class="icon">
+                    <use xlink:href="#bullet"></use>
+                </svg>
+            </label>
+            <label for="slide4">
+                <svg id="svg4" class="icon">
+                    <use xlink:href="#bullet"></use>
+                </svg>
+            </label>
+        </div>
+    </div>
+    <div class="svg-imgs"> 
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="bullet" viewBox="0 0 42 42">
+                <circle cx="50%" cy="50%" r="15" />
+            </symbol>
+        </svg>
+    </div>
+</body>
+</html>
